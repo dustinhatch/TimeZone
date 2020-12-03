@@ -128,9 +128,9 @@ namespace P2
 
         public void addTime(int h, int m, int s)
         {
-            //Allows for a clock that resets to zero after 23:59:59 and allowing any amount of time to be added. 
+           
 
-            if ((Second + s) > 59) //Increments seconds and minutes accordingly 
+            if ((Second + s) > 59) 
             {
                 Second = (Second + s) % 60;
                 m += (Second + s) / 60;
@@ -138,7 +138,7 @@ namespace P2
             else
                 Second += s;
 
-            if ((Minute + m) > 59) //Increments minutes and hours accordingly
+            if ((Minute + m) > 59) 
             {
                 Minute = (Minute + m) % 60;
                 h += (Minute + m) / 60;
@@ -149,8 +149,8 @@ namespace P2
 
             if ((Hour + h) > 23) 
             {
-                //Hour = (Hour + h) % 24; //Resets the clock if greater than 23 
-                throw new ArgumentOutOfRangeException(nameof(Hour), Hour+h, $"Time exceeds 23:59:59"); //Exception for bonus 
+               
+                throw new ArgumentOutOfRangeException(nameof(Hour), Hour+h, $"Time exceeds 23:59:59"); 
 
             }
             else
@@ -159,9 +159,9 @@ namespace P2
 
         public void addTime(Time2 time)
         {
-            //Allows for a clock that resets to zero after 23:59:59.
+            
 
-            if ((Second + time.Second) > 59) //Increments seconds and minutes accordingly
+            if ((Second + time.Second) > 59) 
             {
                 Second = (Second + time.Second) % 60;
                 Minute += (Second + time.Second) / 60;
@@ -169,7 +169,7 @@ namespace P2
             else 
                 Second += time.Second;
 
-            if ((Minute + time.Minute) > 59) //Increments minutes and hours accordingly
+            if ((Minute + time.Minute) > 59) /
             {
                 Minute = (Minute + time.Minute) % 60;
                 Hour += (Minute + time.Minute) / 60;
@@ -177,7 +177,7 @@ namespace P2
             else
                 Minute += time.Minute;
 
-            if ((Hour + time.Hour) > 23) //Resets the clock if greater than 23 
+            if ((Hour + time.Hour) > 23) 
             {
                 Hour = (Hour + time.Hour) % 24;
 
